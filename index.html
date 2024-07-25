@@ -11,10 +11,10 @@
 </head>
 
 <body onload="fetchData()">
-    
+
     <header onclick="fetchData()">
         <img class="pokemon-logo" src="./img/pokemon.png" alt="Pokemon">
-        <h1 >Pokedex Galerie</h1>
+        <h1>Pokedex Galerie</h1>
     </header>
 
     <div>
@@ -27,6 +27,14 @@
 
         <button class="load-btn" onclick="loadMore()" id="load-more">Load more <img class="pokemon-logo-btn"
                 src="./img/pokemon.png" alt="Pokemon"></button>
+
+    </div>
+    <div id="overlay" class="overlay d-none">
+        <div class="pokemon-details">
+            <div class="left-right-logo-container">
+           
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
