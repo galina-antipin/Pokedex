@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex Galerie</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="icon" type="image/png" href="./img/pokemon.png">
+</head>
+
+<body onload="fetchData()">
+    
+    <header onclick="fetchData()">
+        <img class="pokemon-logo" src="./img/pokemon.png" alt="Pokemon">
+        <h1 >Pokedex Galerie</h1>
+    </header>
+
+    <div>
+        <hr style="border-color: rgb(201, 193, 193, 0.1) ;">
+    </div>
+
+    <div class="content-wrapper">
+        <input type="text" id="searchBox" oninput="filterAndShowNames(this.value)" placeholder="Search Pokemon">
+        <div id="content"></div>
+
+        <button class="load-btn" onclick="loadMore()" id="load-more">Load more <img class="pokemon-logo-btn"
+                src="./img/pokemon.png" alt="Pokemon"></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
