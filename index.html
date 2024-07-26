@@ -7,10 +7,11 @@
     <title>Pokedex Galerie</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./typecolors.css">
     <link rel="icon" type="image/png" href="./img/pokemon.png">
 </head>
 
-<body onload="fetchData()">
+<body onload="showLoadingPage()">
 
     <header onclick="fetchData()">
         <img class="pokemon-logo" src="./img/pokemon.png" alt="Pokemon">
@@ -27,14 +28,12 @@
 
         <button class="load-btn" onclick="loadMore()" id="load-more">Load more <img class="pokemon-logo-btn"
                 src="./img/pokemon.png" alt="Pokemon"></button>
-
     </div>
+
     <div id="overlay" class="overlay d-none">
-        <div class="pokemon-details">
-            <div class="left-right-logo-container">
-           
-            </div>
-        </div>
+    </div>
+    <div id="loadingScreen" class="loading-screen d-none">
+        <p>Loading...</p>
     </div>
 
     <script src="script.js"></script>
