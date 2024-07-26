@@ -5,7 +5,6 @@ let currentPokemonIndex = 0;
 
 function showLoadingPage() {
     document.getElementById('loadingScreen').classList.remove('d-none');
-    fetchData(currentStart, currentEnd);
 }
 
 function hideLoadingPage() {
@@ -13,17 +12,17 @@ function hideLoadingPage() {
 }
 
 async function fetchData(start, end) {
+    showLoadingPage();
     for (let i = start; i <= end; i++) {
         let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
         let responseAsJson = await response.json();
         allPokemons.push(responseAsJson);
     }
-    hideLoadingPage()
+    hideLoadingPage();
     renderPokemonData();
 }
 
 function renderPokemonData(pokemons = allPokemons) {
-
     let pokemonContent = document.getElementById('content');
     pokemonContent.innerHTML = '';
     for (let i = 0; i < pokemons.length; i++) {
@@ -39,7 +38,7 @@ function renderPokemonData(pokemons = allPokemons) {
 function addPokemonHtml(pokemon, imageUrl, typesHtml, typeClass, i) {
     return `
         <div class="pokemon-card ${typeClass}" onclick="openPokemonDetails(${i})">
-            <h2>${capitalizeFirstLetter(pokemon.name)}</h2>
+            <h2 class="pokemon-name">${capitalizeFirstLetter(pokemon.name)}</h2>
             <img src="${imageUrl}">
             <div class="types-container">${typesHtml}</div>
         </div>
@@ -52,7 +51,7 @@ function loadMore() {
     fetchData(currentStart, currentEnd);
 }
 
-function filterAndShowNames(filterWord) {
+function filterAndShowPokemons(filterWord) {
     let value = document.getElementById('searchBox').value;
     if (value.length < 3) {
         return;
@@ -67,6 +66,7 @@ fetchData(currentStart, currentEnd);
 function openPokemonDetails(i, pokemons = allPokemons) {
     currentPokemonIndex = i;
     document.getElementById('overlay').classList.remove('d-none');
+    document.getElementById('body').classList.add('stop-scroll');
     let pokemonDetails = document.getElementById('overlay');
     let pokemon = pokemons[i];
     let imageUrl = pokemon.sprites['other']['official-artwork'].front_default;
@@ -75,11 +75,13 @@ function openPokemonDetails(i, pokemons = allPokemons) {
 }
 
 function addPokemonDetailsHtml(i, pokemons = allPokemons, pokemonDetails, pokemon, imageUrl, typesHtml) {
+    let typeClass = pokemon.types[0].type.name;
     return `<div class="overlay-container">
-                   <h2 onclick="closePokemonDetails()">${capitalizeFirstLetter(pokemon.name)}</h2> 
-                   <div class="pokemon-type" onclick="closePokemonDetails()">${typesHtml}</div>
-                   <img onclick="closePokemonDetails()"src="${imageUrl}">
-                   <div class="pokemon-details"  onclick="closePokemonDetails()">  
+                  <div class="card-above ${typeClass}">
+                      <h3 onclick="closePokemonDetails()">${capitalizeFirstLetter(pokemon.name)}</h3> 
+                      <img onclick="closePokemonDetails()"src="${imageUrl}" alt="Pokemon">
+                  </div>
+                  <div class="pokemon-details"  onclick="closePokemonDetails()">  
                       <div> HP:</span><span> ${pokemon.stats[0].base_stat}</div>
                       <div> Attack: ${pokemon.stats[1].base_stat}</div>
                       <div> Defense: ${pokemon.stats[2].base_stat}</div>
@@ -89,7 +91,7 @@ function addPokemonDetailsHtml(i, pokemons = allPokemons, pokemonDetails, pokemo
                       <img id="" onclick="swipeLeft()" class="left-right-logo" src="./img/left.svg" alt="left">
                       <img onclick="swipeRight()" class="left-right-logo" src="./img/right.svg" alt="right">
                   </div>
-              </div>`;
+            </div>`;
 }
 
 function capitalizeFirstLetter(string) {
@@ -112,4 +114,5 @@ function swipeRight() {
 
 function closePokemonDetails() {
     document.getElementById('overlay').classList.add('d-none');
+    document.getElementById('body').classList.remove('stop-scroll');
 }

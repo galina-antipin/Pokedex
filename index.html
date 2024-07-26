@@ -8,14 +8,21 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./fonts.css">
     <link rel="stylesheet" href="./typecolors.css">
-    <link rel="icon" type="image/png" href="./img/pokemon.png">
+    <link rel="icon" type="image/png" href="./img/pokemonRed.png">
 </head>
 
-<body onload="showLoadingPage()">
+<body id="body" onload="fetchData()">
 
     <header onclick="fetchData()">
-        <img class="pokemon-logo" src="./img/pokemon.png" alt="Pokemon">
-        <h1>Pokedex Galerie</h1>
+        <div class="logo-section">
+            <img class="pokemon-logo" src="./img/pokemonRed.png" alt="Pokemon">
+            <h1>Pokedex Galerie</h1>
+          
+        </div>
+        <div class="search-section"><input type="text" id="searchBox" oninput="filterAndShowPokemons(this.value)"
+                placeholder="Search Pokemon"> </div>
+    </header>
+    </div>
     </header>
 
     <div>
@@ -23,17 +30,19 @@
     </div>
 
     <div class="content-wrapper">
-        <input type="text" id="searchBox" oninput="filterAndShowNames(this.value)" placeholder="Search Pokemon">
+
         <div id="content"></div>
 
         <button class="load-btn" onclick="loadMore()" id="load-more">Load more <img class="pokemon-logo-btn"
-                src="./img/pokemon.png" alt="Pokemon"></button>
+                src="./img/pokemonRed.png" alt="Pokemon"></button>
     </div>
 
     <div id="overlay" class="overlay d-none">
     </div>
     <div id="loadingScreen" class="loading-screen d-none">
-        <p>Loading...</p>
+        <div class="spinner">
+            <img class="spinner-logo" src="./img/pokemonRed.png" alt="Pokemon"> <span>Loading ...</span>
+        </div>
     </div>
 
     <script src="script.js"></script>
