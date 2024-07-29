@@ -10,19 +10,18 @@ header {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color:  #ffffff;;
+    background-color: #ffffff;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 h1 {
-    font-family: 'Open Sans';
     font-weight: 400;
     cursor: pointer;
 }
 
 h2 {
-    font-family: 'Open Sans';
     font-weight: 400;
     font-size: 24px;
     margin-block-start: 0em;
@@ -31,7 +30,6 @@ h2 {
 }
 
 h3 {
-    font-family: 'Open Sans';
     font-weight: 400;
     font-size: 18px;
     margin-block-start: 0em;
@@ -47,6 +45,7 @@ h3 {
     height: 40px;
     padding-right: 20px;
     cursor: pointer;
+    filter: drop-shadow(3px 3px 3px #222);
 }
 
 input[type=text] {
@@ -57,7 +56,7 @@ input[type=text] {
     margin-top: 10px;
     outline: none;
     padding: 5px;
-    background-color: #f7a0a0;
+    background-color: #fafafa;
 }
 
 #content {
@@ -72,7 +71,6 @@ input[type=text] {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-attachment: fixed;
 }
 
 .pokemon-card {
@@ -131,12 +129,19 @@ input[type=text] {
     margin-top: 20px;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.load-btn:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 .pokemon-logo-btn {
     height: 30px;
     padding-left: 10px;
     cursor: pointer;
+    filter: drop-shadow(3px 3px 3px #222);
 }
 
 .overlay {
@@ -185,8 +190,12 @@ input[type=text] {
 .left-right-logo {
     height: 20px !important;
     cursor: pointer;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 5px;
+}
+
+.left-right-logo:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 .left-right-logo-container {

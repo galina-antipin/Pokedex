@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Pokemon" content="Pokemon Karten">
     <title>Pokedex Galerie</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./fonts.css">
@@ -17,9 +17,8 @@
         <div class="logo-section">
             <img class="pokemon-logo" src="./img/pokemonRed.png" alt="Pokemon">
             <h1>Pokedex Galerie</h1>
-          
         </div>
-        <div class="search-section"><input type="text" id="searchBox" oninput="filterAndShowPokemons(this.value)"
+        <div class="search-section"><input type="text" id="searchBox" oninput="filterAndShowPokemons(value)"
                 placeholder="Search Pokemon"> </div>
     </header>
     </div>
@@ -37,7 +36,7 @@
                 src="./img/pokemonRed.png" alt="Pokemon"></button>
     </div>
 
-    <div id="overlay" class="overlay d-none">
+    <div id="overlay" class="overlay d-none" onclick="event.stopPropagation();">
     </div>
     <div id="loadingScreen" class="loading-screen d-none">
         <div class="spinner">
