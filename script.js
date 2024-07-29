@@ -55,7 +55,8 @@ function loadMore() {
 function filterAndShowPokemons(filterWord) {
     let value = document.getElementById('searchBox').value;
     if (value.length < 3) {
-        renderPokemonData();
+        filteredPokemons = [];
+        renderPokemonData(allPokemons);
         return;
     }
     filteredPokemons = allPokemons.filter(pokemon => pokemon.name.toLowerCase().includes(value.toLowerCase()));
