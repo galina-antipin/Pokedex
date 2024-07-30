@@ -60,7 +60,7 @@ function filterAndShowPokemons(filterWord) {
         return;
     }
     filteredPokemons = allPokemons.filter(pokemon => pokemon.name.toLowerCase().includes(value.toLowerCase()));
-    renderPokemonData(filteredPokemons.slice(0, 10));   
+    renderPokemonData(filteredPokemons.slice(0, 10));
 }
 
 fetchData(currentStart, currentEnd);
@@ -92,6 +92,11 @@ function renderPokemonDetails(pokemon) {
     let imageUrl = pokemon.sprites['other']['official-artwork'].front_default;
     let typesHtml = pokemon.types.map(typeInfo => `<span>${typeInfo.type.name}</span>`).join('');
     pokemonDetails.innerHTML = addPokemonDetailsHtml(pokemon, imageUrl, typesHtml);
+    if (currentPokemonIndex === 0) {
+        document.getElementById('left-button').classList.add('d-none');
+    } else {
+        document.getElementById('left-button').classList.remove('d-none');
+    }
 }
 
 function addPokemonDetailsHtml(pokemon, imageUrl, typesHtml) {
@@ -109,7 +114,7 @@ function addPokemonDetailsHtml(pokemon, imageUrl, typesHtml) {
                 <div> Speed: <span>${pokemon.stats[5].base_stat}</span></div>
             </div>
             <div class="left-right-logo-container">
-                <img onclick="swipeLeft(); event.stopPropagation();" class="left-right-logo" src="./img/left.svg" alt="left">
+                <img onclick="swipeLeft(); event.stopPropagation();" class="left-right-logo" id="left-button" src="./img/left.svg" alt="left">
                 <img onclick="swipeRight(); event.stopPropagation();" class="left-right-logo" src="./img/right.svg" alt="right">
             </div>
         </div>`;
@@ -124,12 +129,24 @@ function swipeLeft() {
         currentPokemonIndex--;
         openPokemonDetails(currentPokemonIndex);
     }
+    if (currentPokemonIndex === 0) {
+        document.getElementById('left-button').classList.add('d-none');
+    } else {
+        document.getElementById('left-button').classList.remove('d-none');
+    }
 }
 
 function swipeRight() {
-    if (currentPokemonIndex < allPokemons.length) {
+    if (currentPokemonIndex < allPokemons.length - 1) {
         currentPokemonIndex++;
         openPokemonDetails(currentPokemonIndex);
+    } else {
+        loadMore();
+    }
+    if (currentPokemonIndex === 0) {
+        document.getElementById('left-button').classList.add('d-none');
+    } else {
+        document.getElementById('left-button').classList.remove('d-none');
     }
 }
 

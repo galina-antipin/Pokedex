@@ -11,9 +11,6 @@ header {
     align-items: center;
     flex-direction: column;
     background-color: #ffffff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
 h1 {
