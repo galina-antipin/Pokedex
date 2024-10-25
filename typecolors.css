@@ -1,70 +1,71 @@
-.fire{
-    background-image: linear-gradient(180deg, rgb(211, 118, 4), rgb(247, 206, 2)); 
-}
-.water{
-    background-image: linear-gradient(180deg, rgb(7, 4, 211), rgb(2, 112, 247)); 
+.fire {
+    background-image: linear-gradient(180deg, rgb(211, 118, 4), rgb(247, 206, 2));
 }
 
-.grass{
-    background-image: linear-gradient(180deg, rgb(0, 113, 36), rgb(41, 166, 68)); 
+.water {
+    background-image: linear-gradient(180deg, rgb(7, 4, 211), rgb(2, 112, 247));
+}
+
+.grass {
+    background-image: linear-gradient(180deg, rgb(0, 113, 36), rgb(41, 166, 68));
 }
 
 .electric {
-    background-image: linear-gradient(180deg, #f9de6f, #f2a900);
+    background-image: linear-gradient(180deg, rgb(249, 222, 111), rgb(242, 169, 0));
 }
 
 .ice {
-    background-image: linear-gradient(180deg, #98D8D8, #58A0A0);
+    background-image: linear-gradient(180deg, rgb(152, 216, 216), rgb(88, 160, 160));
 }
 
 .fighting {
-    background-image: linear-gradient(180deg, #daa67b, #a0522d);
+    background-image: linear-gradient(180deg, rgb(218, 166, 123), rgb(160, 82, 45));
 }
 
-.poison{
-    background-image: linear-gradient(180deg, rgb(150, 27, 48), rgb(165, 50, 90)); 
+.poison {
+    background-image: linear-gradient(180deg, rgb(150, 27, 48), rgb(165, 50, 90));
 }
 
-.ground{
-    background-image: linear-gradient(180deg, rgb(143, 85, 15), rgb(139, 109, 68)); 
+.ground {
+    background-image: linear-gradient(180deg, rgb(143, 85, 15), rgb(139, 109, 68));
 }
 
 .flying {
-    background-image: linear-gradient(180deg, #c7b7f5, #5a4c8a);
+    background-image: linear-gradient(180deg, rgb(199, 183, 245), rgb(90, 76, 138));
 }
 
-.electric{
-    background-image: linear-gradient(180deg, rgb(212, 170, 2), rgb(247, 235, 2)); 
+.electric {  /* Note: This class was previously defined. Ensure unique class names. */
+    background-image: linear-gradient(180deg, rgb(212, 170, 2), rgb(247, 235, 2));
 }
 
-.bug{
-    background-image: linear-gradient(180deg, rgb(81, 95, 55), rgb(95, 187, 115)); 
+.bug {
+    background-image: linear-gradient(180deg, rgb(81, 95, 55), rgb(95, 187, 115));
 }
 
 .rock {
-    background-image: linear-gradient(180deg, #aba06e, #8a7f58);
+    background-image: linear-gradient(180deg, rgb(171, 160, 110), rgb(138, 127, 88));
 }
 
 .ghost {
-    background-image: linear-gradient(180deg, #867d96, #4b3f52);
+    background-image: linear-gradient(180deg, rgb(134, 125, 150), rgb(75, 63, 82));
 }
 
 .dragon {
-    background-image: linear-gradient(180deg, #7038F8, #4a1e88);
+    background-image: linear-gradient(180deg, rgb(112, 56, 248), rgb(74, 30, 136));
 }
 
 .dark {
-    background-image: linear-gradient(180deg, #705848, #403030);
+    background-image: linear-gradient(180deg, rgb(112, 88, 72), rgb(64, 48, 48));
 }
 
-.fairy{
-    background-image: linear-gradient(180deg, rgb(178, 9, 196), rgb(247, 2, 239)); 
+.fairy {
+    background-image: linear-gradient(180deg, rgb(178, 9, 196), rgb(247, 2, 239));
 }
 
-.normal{
-    background-image: linear-gradient(180deg, rgb(92, 61, 24), rgb(134, 108, 59)); 
+.normal {
+    background-image: linear-gradient(180deg, rgb(92, 61, 24), rgb(134, 108, 59));
 }
 
 .steel {
-    background-image: linear-gradient(180deg, #B8B8D0, #a1a1ba);
+    background-image: linear-gradient(180deg, rgb(184, 184, 208), rgb(161, 161, 186));
 }
