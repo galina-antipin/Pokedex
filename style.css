@@ -45,13 +45,19 @@ h3 {
 
 input[type=text] {
     font-family: 'Open Sans';
-    border-radius: 10px;
+    border-radius: 15px;
+    border: none;
     width: 200px;
     margin-bottom: 20px;
-    margin-top: 10px;
+    margin-top: -5px;
     outline: none;
-    padding: 5px;
-    background-color: #fafafa;
+    padding: 10px;
+    background-color: #eddc7d;
+    border: 2px solid #385fac;  
+}
+
+input[type=text]:hover {
+    border: 2px solid  #050d1d;  
 }
 
 #content {
