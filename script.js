@@ -29,7 +29,6 @@ function renderPokemonData(pokemons = allPokemons) {
     for (let i = 0; i < pokemons.length; i++) {
         let pokemon = pokemons[i];
         let imageUrl = pokemon.sprites['other']['official-artwork'].front_default;
-
         let typesHtml = pokemon.types.map(type => `<img src="./img/${type.type.name}.svg" alt="${type.type.name} type" class="pokemon-type-icon">`).join(' ');
         let typeClass = pokemon.types[0].type.name;
         pokemonContent.innerHTML += addPokemonHtml(pokemon, imageUrl, typesHtml, typeClass, i);
@@ -39,7 +38,8 @@ function renderPokemonData(pokemons = allPokemons) {
 function addPokemonHtml(pokemon, imageUrl, typesHtml, typeClass, i) {
     return `
         <div class="pokemon-card ${typeClass}" onclick="openPokemonDetails(${i})">
-            <h2 class="pokemon-name">${capitalizeFirstLetter(pokemon.name)}</h2>
+            <div class="name-section"><h2 class="pokemon-name">${capitalizeFirstLetter(pokemon.name)}</h2>
+            <span class="pokemon-number">#${i + 1}</span> </div>
             <img src="${imageUrl}" alt="Pokemon">
             <div class="types-container">${typesHtml}</div>
         </div>
