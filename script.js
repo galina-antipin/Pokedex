@@ -30,7 +30,7 @@ function renderPokemonData(pokemons = allPokemons) {
         let pokemon = pokemons[i];
         let imageUrl = pokemon.sprites['other']['official-artwork'].front_default;
 
-        let typesHtml = pokemon.types.map(type => type.type.name).join(' ');
+        let typesHtml = pokemon.types.map(type => `<img src="./img/${type.type.name}.svg" alt="${type.type.name} type" class="pokemon-type-icon">`).join(' ');
         let typeClass = pokemon.types[0].type.name;
         pokemonContent.innerHTML += addPokemonHtml(pokemon, imageUrl, typesHtml, typeClass, i);
     }

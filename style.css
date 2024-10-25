@@ -96,10 +96,11 @@ input[type=text]:hover {
     cursor: pointer;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
+    border: 2px solid #000000;
 }
 
 .pokemon-card img {
-    height: 150px;
+    height: 250px;
     filter: drop-shadow(3px 3px 3px #222);
 }
 
@@ -120,6 +121,11 @@ input[type=text]:hover {
     margin-bottom: 15px;
     font-family: 'Agdasima';
     font-weight: 700;
+}
+
+.types-container img {
+    width: 40px;
+    height: 40px;
 }
 
 .load-btn {
