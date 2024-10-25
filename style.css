@@ -203,9 +203,7 @@ input[type=text]:hover {
 .pokemon-details {
     font-family: 'Agdasima';
     font-weight: 700;
-    border-radius: 10px;
     padding-top: 40px;
-    width: 100%;
 }
 
 .d-none {
@@ -215,6 +213,24 @@ input[type=text]:hover {
 .opacity-none {
     opacity:0;
     pointer-events: none;
+}
+
+.overlay-container img {
+    filter: drop-shadow(3px 3px 3px #222);
+}
+
+.stop-scroll {
+    overflow: hidden;
+}
+
+.card-above {
+    border-radius: 10px;
+}
+
+.card-bottom {
+    border: 6px solid lightblue;
+    border-radius: 10px;
+    width: 310px;
 }
 
 .left-right-logo {
@@ -272,18 +288,6 @@ input[type=text]:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.overlay-container img {
-    filter: drop-shadow(3px 3px 3px #222);
-}
-
-.stop-scroll {
-    overflow: hidden;
-}
-
-.card-above {
-    border-radius: 10px;
 }
 
 @media (max-width: 676px) {
