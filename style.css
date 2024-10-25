@@ -4,14 +4,25 @@ body {
     font-family: 'Open Sans';
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 header {
     display: flex;
-    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    height: 30%;
+    height: 20%;
+    width: 100%;
     background-image: url(./img/pokemon-img.jpg);
+}
+
+.search-section {
+    display: flex;
+    justify-content: flex-end;
 }
 
 h1 {
@@ -40,24 +51,25 @@ h3 {
 }
 
 .logo-section img {
-    width: 50%;
+    width: 650px;
+    margin-top: -3%;
 }
 
 input[type=text] {
     font-family: 'Open Sans';
     border-radius: 15px;
     border: none;
-    width: 200px;
-    margin-bottom: 20px;
-    margin-top: -5px;
+    width: 20%;
     outline: none;
     padding: 10px;
     background-color: #eddc7d;
-    border: 2px solid #385fac;  
+    border: 2px solid #385fac;
+    margin-top: 20px;
+    margin-right: 3%;
 }
 
 input[type=text]:hover {
-    border: 2px solid  #050d1d;  
+    border: 2px solid #050d1d;
 }
 
 #content {
@@ -72,6 +84,7 @@ input[type=text]:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 1920px;
 }
 
 .pokemon-card {
@@ -255,4 +268,59 @@ input[type=text]:hover {
 
 .card-above {
     border-radius: 10px;
+}
+
+@media (max-width: 676px) {
+    .logo-section img {
+        width: 550px;
+    }
+}
+
+@media (max-width: 570px) {
+    .logo-section img {
+        width: 450px;
+        margin-bottom: -5%;
+    }
+
+    .search-section {
+        justify-content: center;
+        margin-bottom: 5%;
+    }
+
+    header {
+        flex-direction: column-reverse;
+    }
+
+    input[type=text] {
+        width: 50%;
+        margin-right: 0%;
+    }
+}
+
+@media (max-width: 467px) {
+    .logo-section img {
+        width: 350px;
+        margin-bottom: -5%;
+    }
+}
+
+@media (max-width: 398px) {
+    .pokemon-card {
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+        width: 250px;
+        transition: transform 0.2s;
+        cursor: pointer;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+}
+
+@media (max-width: 370px) {
+    .logo-section img {
+        width: 300px;
+        margin-bottom: -5%;
+    }
 }
