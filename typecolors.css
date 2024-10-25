@@ -1,71 +1,70 @@
-.fire {
-    background-color: rgb(230, 136, 136);
+.fire{
+    background-image: linear-gradient(180deg, rgb(211, 118, 4), rgb(247, 206, 2)); 
+}
+.water{
+    background-image: linear-gradient(180deg, rgb(7, 4, 211), rgb(2, 112, 247)); 
 }
 
-.water {
-    background-color: lightblue;
-}
-
-.grass {
-    background-color: rgb(170, 241, 170);
+.grass{
+    background-image: linear-gradient(180deg, rgb(0, 113, 36), rgb(41, 166, 68)); 
 }
 
 .electric {
-    background-color: #f9de6f;
+    background-image: linear-gradient(180deg, #f9de6f, #f2a900);
 }
 
 .ice {
-    background-color: #98D8D8;
+    background-image: linear-gradient(180deg, #98D8D8, #58A0A0);
 }
 
 .fighting {
-    background-color: #daa67b;
+    background-image: linear-gradient(180deg, #daa67b, #a0522d);
 }
 
-.poison {
-    background-color: #eea5ee;
+.poison{
+    background-image: linear-gradient(180deg, rgb(150, 27, 48), rgb(165, 50, 90)); 
 }
 
-.ground {
-    background-color: #e1d2a7;
+.ground{
+    background-image: linear-gradient(180deg, rgb(143, 85, 15), rgb(139, 109, 68)); 
 }
 
 .flying {
-    background-color: #c7b7f5;
+    background-image: linear-gradient(180deg, #c7b7f5, #5a4c8a);
 }
 
-.psychic {
-    background-color: #f1a3bb;
+.electric{
+    background-image: linear-gradient(180deg, rgb(212, 170, 2), rgb(247, 235, 2)); 
 }
 
-.bug {
-    background-color: #bbc094;
+.bug{
+    background-image: linear-gradient(180deg, rgb(81, 95, 55), rgb(95, 187, 115)); 
 }
 
 .rock {
-    background-color: #aba06e;
+    background-image: linear-gradient(180deg, #aba06e, #8a7f58);
 }
 
 .ghost {
-    background-color: #867d96;
+    background-image: linear-gradient(180deg, #867d96, #4b3f52);
 }
 
 .dragon {
-    background-color: #7038F8;
+    background-image: linear-gradient(180deg, #7038F8, #4a1e88);
 }
 
 .dark {
-    background-color: #705848;
+    background-image: linear-gradient(180deg, #705848, #403030);
 }
 
-.fairy {
-    background-color: #f1c2c7;
+.fairy{
+    background-image: linear-gradient(180deg, rgb(178, 9, 196), rgb(247, 2, 239)); 
 }
 
-.normal {
-    background-color: #99c1a4;
+.normal{
+    background-image: linear-gradient(180deg, rgb(92, 61, 24), rgb(134, 108, 59)); 
 }
 
 .steel {
-    background-color: #B8B8D0;
+    background-image: linear-gradient(180deg, #B8B8D0, #a1a1ba);
 }
