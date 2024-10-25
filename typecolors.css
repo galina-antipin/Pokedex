@@ -1,67 +1,84 @@
 .fire {
     background-image: linear-gradient(180deg, rgb(211, 118, 4), rgb(247, 206, 2));
+    border: 8px solid rgb(247, 206, 2);
 }
 
 .water {
     background-image: linear-gradient(180deg, rgb(7, 4, 211), rgb(2, 112, 247));
+    border: 8px solid rgb(2, 112, 247);
 }
 
 .grass {
     background-image: linear-gradient(180deg, rgb(0, 113, 36), rgb(41, 166, 68));
+    border: 8px solid rgb(41, 166, 68);
 }
 
 .electric {
     background-image: linear-gradient(180deg, rgb(249, 222, 111), rgb(242, 169, 0));
+    border: 8px solid rgb(242, 169, 0);
 }
 
 .ice {
     background-image: linear-gradient(180deg, rgb(152, 216, 216), rgb(88, 160, 160));
+    border: 8px solid rgb(88, 160, 160);
 }
 
 .fighting {
     background-image: linear-gradient(180deg, rgb(218, 166, 123), rgb(160, 82, 45));
+    border: 8px solid rgb(160, 82, 45);
 }
 
 .poison {
     background-image: linear-gradient(180deg, rgb(150, 27, 48), rgb(165, 50, 90));
+    border: 8px solid rgb(165, 50, 90);
 }
 
 .ground {
     background-image: linear-gradient(180deg, rgb(143, 85, 15), rgb(139, 109, 68));
+    border: 8px solid rgb(139, 109, 68);
 }
 
 .flying {
     background-image: linear-gradient(180deg, rgb(199, 183, 245), rgb(90, 76, 138));
+    border: 8px solid rgb(90, 76, 138);
 }
 
 .bug {
     background-image: linear-gradient(180deg, rgb(81, 95, 55), rgb(95, 187, 115));
+    border: 8px solid rgb(95, 187, 115);
 }
 
 .rock {
     background-image: linear-gradient(180deg, rgb(171, 160, 110), rgb(138, 127, 88));
+    border: 8px solid rgb(138, 127, 88);
 }
 
 .ghost {
     background-image: linear-gradient(180deg, rgb(134, 125, 150), rgb(75, 63, 82));
+    border: 8px solid rgb(75, 63, 82);
 }
 
 .dragon {
     background-image: linear-gradient(180deg, rgb(112, 56, 248), rgb(74, 30, 136));
+    border: 8px solid rgb(74, 30, 136);
 }
 
 .dark {
     background-image: linear-gradient(180deg, rgb(112, 88, 72), rgb(64, 48, 48));
+    border: 8px solid rgb(64, 48, 48);
 }
 
 .fairy {
     background-image: linear-gradient(180deg, rgb(178, 9, 196), rgb(247, 2, 239));
+    border: 8px solid rgb(247, 2, 239);
 }
 
 .normal {
     background-image: linear-gradient(180deg, rgb(92, 61, 24), rgb(134, 108, 59));
+    border: 8px solid rgb(134, 108, 59);
 }
 
 .steel {
     background-image: linear-gradient(180deg, rgb(184, 184, 208), rgb(161, 161, 186));
+    border: 8px solid rgb(161, 161, 186);
 }

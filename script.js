@@ -93,9 +93,9 @@ function renderPokemonDetails(pokemon) {
     let typesHtml = pokemon.types.map(typeInfo => `<span>${typeInfo.type.name}</span>`).join('');
     pokemonDetails.innerHTML = addPokemonDetailsHtml(pokemon, imageUrl, typesHtml);
     if (currentPokemonIndex === 0) {
-        document.getElementById('left-button').classList.add('d-none');
+        document.getElementById('left-button').classList.add('opacity-none');
     } else {
-        document.getElementById('left-button').classList.remove('d-none');
+        document.getElementById('left-button').classList.remove('opacity-none');
     }
 }
 

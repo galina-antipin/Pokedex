@@ -39,7 +39,7 @@ h2 {
 
 h3 {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 36px;
     margin-block-start: 0em;
     margin-block-end: 0em;
 }
@@ -183,8 +183,8 @@ input[type=text]:hover {
 
 .overlay-container {
     border-radius: 10px;
-    width: 250px;
-    height: 400px;
+    width: 320px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -212,8 +212,13 @@ input[type=text]:hover {
     display: none !important;
 }
 
+.opacity-none {
+    opacity:0;
+    pointer-events: none;
+}
+
 .left-right-logo {
-    height: 20px !important;
+    height: 70px !important;
     cursor: pointer;
     padding: 5px;
 }
