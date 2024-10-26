@@ -158,25 +158,23 @@ input[type=text]:focus {
 }
 
 .load-btn {
-    background-color: white;
-    color: black;
-    border: 2px solid #fffefe;
-    padding: 5px 5px;
-    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    color: #eb9f24;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
     font-family: 'Agdasima';
     font-weight: 700;
-    font-size: 18px;
-    width: 200px;
+    font-size: 26px;
     cursor: pointer;
     margin-top: 20px;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .load-btn:hover {
     transform: scale(1.1);
-    opacity: 0.8;
 }
 
 .pokemon-logo-btn {
@@ -221,7 +219,12 @@ input[type=text]:focus {
 .pokemon-details {
     font-family: 'Agdasima';
     font-weight: 700;
-    padding-top: 40px;
+    padding-top: 20px;
+}
+
+.pokemon-details div {
+    display: flex;
+    justify-content: space-between;
 }
 
 .d-none {
@@ -354,7 +357,5 @@ input[type=text]:focus {
 @media (max-width: 407px) {
     .pikachu-logo {
       height: 150px;
-
     }
-
 }
