@@ -50,6 +50,7 @@ function loadMore() {
     currentStart = currentEnd + 1;
     currentEnd += 20;
     fetchData(currentStart, currentEnd);
+    document.getElementById('noPokemonsMessage').classList.add('d-none');
 }
 
 function filterAndShowPokemons(filterWord) {
@@ -57,6 +58,7 @@ function filterAndShowPokemons(filterWord) {
     if (value.length < 3) {
         filteredPokemons = [];
         renderPokemonData(allPokemons);
+        document.getElementById('noPokemonsMessage').classList.add('d-none');
         return;
     }
     filteredPokemons = allPokemons.filter(pokemon => pokemon.name.toLowerCase().includes(value.toLowerCase()));
