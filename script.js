@@ -4,14 +4,25 @@ let currentEnd = 20;
 let currentPokemonIndex = 0;
 let filteredPokemons = [];
 
+/**
+ * Displays the loadingScreen
+ */
 function showLoadingScreen() {
     document.getElementById('loadingScreen').classList.remove('d-none');
 }
 
+/**
+ * Hides the loadingScreen
+ */
 function hideLoadingScreen() {
     document.getElementById('loadingScreen').classList.add('d-none');
 }
 
+/**
+ * Fetches Pokémon data from the PokéAPI for a specified range of IDs
+ * @param {number} start The starting Pokémon ID (inclusive) to fetch data for.
+ * @param {number} end The ending Pokémon ID (inclusive) to fetch data for.
+ */
 async function fetchData(start, end) {
     showLoadingScreen();
     for (let i = start; i <= end; i++) {
@@ -23,6 +34,11 @@ async function fetchData(start, end) {
     renderPokemonData();
 }
 
+/**
+ * Renders the Pokémons
+ * @param {Array} pokemons An array of Pokémons to render.
+ *                                         
+ */
 function renderPokemonData(pokemons = allPokemons) {
     let pokemonContent = document.getElementById('content');
     pokemonContent.innerHTML = '';
@@ -35,17 +51,9 @@ function renderPokemonData(pokemons = allPokemons) {
     }
 }
 
-function addPokemonHtml(pokemon, imageUrl, typesHtml, typeClass, i) {
-    return `
-        <div class="pokemon-card ${typeClass}" onclick="openPokemonDetails(${i})">
-            <div class="name-section"><h2 class="pokemon-name">${capitalizeFirstLetter(pokemon.name)}</h2>
-            <span class="pokemon-number">#${i + 1}</span> </div>
-            <img src="${imageUrl}" alt="Pokemon">
-            <div class="types-container">${typesHtml}</div>
-        </div>
-    `;
-}
-
+/**
+ * Loads more Pokémons
+ */
 function loadMore() {
     currentStart = currentEnd + 1;
     currentEnd += 20;
@@ -53,6 +61,11 @@ function loadMore() {
     document.getElementById('noPokemonsMessage').classList.add('d-none');
 }
 
+/**
+ * Filters the Pokémon and displays the filtered results. 
+ * @param {string} filterWord The word used to filter Pokémon names and shows or hides a message if no Pokémon match the search criteria.
+ * @returns
+ */
 function filterAndShowPokemons(filterWord) {
     let value = document.getElementById('searchBox').value;
     if (value.length < 3) {
@@ -72,6 +85,10 @@ function filterAndShowPokemons(filterWord) {
 
 fetchData(currentStart, currentEnd);
 
+/**
+ * Opens the details for a picked Pokémon
+ * @param {number} i The index of the Pokémon to display details
+ */
 function openPokemonDetails(i) {
     if (filteredPokemons.length > 0 && i < filteredPokemons.length) {
         currentPokemonIndex = i;
@@ -87,6 +104,9 @@ function openPokemonDetails(i) {
     }
 }
 
+/**
+ * Opens the details of filtered Pokemons
+ */
 function openPokemonDetailsOfFilteredPokemons() {
     document.getElementById('overlay').classList.remove('d-none');
     document.getElementById('body').classList.add('stop-scroll');
@@ -94,6 +114,10 @@ function openPokemonDetailsOfFilteredPokemons() {
     renderPokemonDetails(pokemon);
 }
 
+/**
+ * Renders details of Pokémon on an overlay
+ * @param {Object} pokemon The object of Pokemon details
+ */
 function renderPokemonDetails(pokemon) {
     let pokemonDetails = document.getElementById('overlay');
     let imageUrl = pokemon.sprites['other']['official-artwork'].front_default;
@@ -106,32 +130,18 @@ function renderPokemonDetails(pokemon) {
     }
 }
 
-function addPokemonDetailsHtml(pokemon, imageUrl, typesHtml) {
-    let typeClass = pokemon.types[0].type.name;
-    return `
-        <div class="overlay-container" onclick="event.stopPropagation();">
-            <div class="card-above ${typeClass}">
-                <h3>${capitalizeFirstLetter(pokemon.name)}</h3> 
-                <img src="${imageUrl}" alt="Pokemon" onclick="closePokemonDetails()">
-            </div>
-            <div class="card-bottom">
-            <div class="pokemon-details">  
-                <div> HP: <span>${pokemon.stats[0].base_stat}</span></div>
-                <div> Attack: <span>${pokemon.stats[1].base_stat}</span></div>
-                <div> Defense: <span>${pokemon.stats[2].base_stat}</span></div>
-                <div> Speed: <span>${pokemon.stats[5].base_stat}</span></div>
-            </div>
-            <div class="left-right-logo-container">
-                <img onclick="swipeLeft(); event.stopPropagation();" class="left-right-logo" id="left-button" src="./img/left.svg" alt="left">
-                <img onclick="swipeRight(); event.stopPropagation();" class="left-right-logo" src="./img/right.svg" alt="right">
-            </div> 
-        </div>`;
-}
-
+/**
+ * Capitalizes the first letter of the given string and converts to lowercase
+ * @param {string} string  The input string to be formatted.
+ * @returns {string} Returns the formatted string with the first letter capitalized  and the rest in lowercase
+ */
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
+/**
+ * Navigates the slide to left, to shows the previous Pokémon
+ */
 function swipeLeft() {
     if (currentPokemonIndex > 0) {
         currentPokemonIndex--;
@@ -144,6 +154,9 @@ function swipeLeft() {
     }
 }
 
+/**
+ * Navigates the slide to right, to shows the next Pokémon
+ */
 function swipeRight() {
     if (currentPokemonIndex < allPokemons.length - 1) {
         currentPokemonIndex++;
@@ -158,6 +171,9 @@ function swipeRight() {
     }
 }
 
+/**
+ * Closes the Pokemon card
+ */
 function closePokemonDetails() {
     document.getElementById('overlay').classList.add('d-none');
     document.getElementById('body').classList.remove('stop-scroll');
