@@ -5,6 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #000000;
 }
 
 ::-webkit-scrollbar {
@@ -17,7 +18,7 @@ header {
     flex-direction: column;
     height: 300px;
     width: 100%;
-    background-image: url(./img/pokedex.jpg);
+    background: black;
 }
 
 .search-section {
@@ -47,34 +48,45 @@ h3 {
 .logo-section {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.logo-section img {
-    width: 650px;
-    margin-top: -3%;
+.pikachu-logo {
+ height: 300px;
+ margin-top: -30px;
+}
+
+.pikachu {
+    height: 200px;
 }
 
 input[type=text] {
     font-family: 'Agdasima';
-    border-radius: 15px;
     border: none;
     width: 20%;
     outline: none;
-    padding: 10px;
-    background-color: #eddc7d;
-    border: 2px solid #385fac;
-    margin-top: 20px;
+    padding: 10px 10px 10px 10px; /* Polsterung oben, links, unten, rechts */
+    border-bottom: 2px solid #eb9f24;
+    background-color: #000000;
+    background-image: url(./img/search-icon.svg); /* Stelle sicher, dass der Pfad korrekt ist */
+    background-size: 25px 25px; /* Größe des Icons */
+    background-position: right 10px center; /* Position des Icons */
+    background-repeat: no-repeat; /* Bild soll nicht wiederholt werden */
+    margin-top: 30px;
     margin-right: 3%;
+    color: #eb9f24;
+    font-size: 24px;
 }
 
 input[type=text]:hover {
-    border: 2px solid #050d1d;
+    border-bottom: 2px solid#eb9f24;
 }
 
 #noPokemonsMessage {
     font-family: 'Agdasima';
     margin-top: 50px;
     font-size: 28px;
+    color: #eb9f24;
 }
 
 #content {
@@ -82,6 +94,7 @@ input[type=text]:hover {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1920px;
+    background-color: black;
 }
 
 .content-wrapper {
@@ -217,7 +230,7 @@ input[type=text]:hover {
 }
 
 .opacity-none {
-    opacity:0;
+    opacity: 0;
     pointer-events: none;
 }
 
@@ -298,18 +311,7 @@ input[type=text]:hover {
     align-items: center;
 }
 
-@media (max-width: 676px) {
-    .logo-section img {
-        width: 550px;
-    }
-}
-
 @media (max-width: 570px) {
-    .logo-section img {
-        width: 450px;
-        margin-bottom: -5%;
-    }
-
     .search-section {
         justify-content: center;
         margin-bottom: 5%;
@@ -325,13 +327,6 @@ input[type=text]:hover {
     }
 }
 
-@media (max-width: 467px) {
-    .logo-section img {
-        width: 350px;
-        margin-bottom: -5%;
-    }
-}
-
 @media (max-width: 398px) {
     .pokemon-card {
         margin: 10px;
@@ -344,11 +339,4 @@ input[type=text]:hover {
         border-radius: 5px;
     }
 
-}
-
-@media (max-width: 370px) {
-    .logo-section img {
-        width: 300px;
-        margin-bottom: -5%;
-    }
 }
