@@ -52,8 +52,8 @@ h3 {
 }
 
 .pikachu-logo {
- height: 300px;
- margin-top: -30px;
+    height: 300px;
+    margin-top: -30px;
 }
 
 .pikachu {
@@ -63,23 +63,23 @@ h3 {
 input[type=text] {
     font-family: 'Agdasima';
     border: none;
-    width: 20%;
     outline: none;
-    padding: 10px 10px 10px 10px; 
+    padding: 10px 10px 10px 10px;
     border-bottom: 2px solid #eb9f24;
     background-color: #000000;
-    background-image: url(./img/search-icon.svg); 
-    background-size: 25px 25px; 
-    background-position: right 10px center; 
-    background-repeat: no-repeat; 
+    background-image: url(./img/search-icon.svg);
+    background-size: 25px 25px;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
     margin-top: 30px;
     margin-right: 3%;
     color: #eb9f24;
     font-size: 24px;
+    width: 20%;
 }
 
 input[type=text]:focus {
-    background-image: none; 
+    background-image: none;
 }
 
 #noPokemonsMessage {
@@ -103,6 +103,7 @@ input[type=text]:focus {
     align-items: center;
     justify-content: center;
     max-width: 1920px;
+    margin-top: 50px;
 }
 
 .pokemon-card {
@@ -112,9 +113,7 @@ input[type=text]:focus {
     width: 250px;
     transition: transform 0.2s;
     cursor: pointer;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    border: 2px solid #000000;
 }
 
 .pokemon-card img {
@@ -202,7 +201,7 @@ input[type=text]:focus {
 
 .overlay-container {
     border-radius: 10px;
-    width: 320px;
+    width: 450px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -248,7 +247,6 @@ input[type=text]:focus {
 }
 
 .card-bottom {
-    border: 6px solid lightblue;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     width: 308px;
@@ -268,6 +266,7 @@ input[type=text]:focus {
 .left-right-logo-container {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 50px;
 }
 
 .loading-screen {
@@ -311,32 +310,51 @@ input[type=text]:focus {
     align-items: center;
 }
 
-@media (max-width: 570px) {
-    .search-section {
-        justify-content: center;
-        margin-bottom: 5%;
+@media (max-width:876px) {
+
+    .pikachu-logo {
+        height: 200px;
+    }
+
+    .pikachu {
+        display: none;
     }
 
     header {
         flex-direction: column-reverse;
     }
 
+    .search-section {
+        justify-content: center;
+    }
+
     input[type=text] {
         width: 50%;
         margin-right: 0%;
     }
+
+    .content-wrapper {
+        margin-top: 0px;
+    }
 }
 
-@media (max-width: 398px) {
+@media (max-width:612px) {
     .pokemon-card {
-        margin: 10px;
-        padding: 10px;
-        text-align: center;
-        width: 250px;
-        transition: transform 0.2s;
-        cursor: pointer;
-        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
+        width: 85%;
+    }
+}
+
+@media (max-width:545px) {
+
+    .overlay-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 407px) {
+    .pikachu-logo {
+      height: 150px;
+
     }
 
 }
