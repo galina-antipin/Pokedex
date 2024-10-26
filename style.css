@@ -65,21 +65,21 @@ input[type=text] {
     border: none;
     width: 20%;
     outline: none;
-    padding: 10px 10px 10px 10px; /* Polsterung oben, links, unten, rechts */
+    padding: 10px 10px 10px 10px; 
     border-bottom: 2px solid #eb9f24;
     background-color: #000000;
-    background-image: url(./img/search-icon.svg); /* Stelle sicher, dass der Pfad korrekt ist */
-    background-size: 25px 25px; /* Größe des Icons */
-    background-position: right 10px center; /* Position des Icons */
-    background-repeat: no-repeat; /* Bild soll nicht wiederholt werden */
+    background-image: url(./img/search-icon.svg); 
+    background-size: 25px 25px; 
+    background-position: right 10px center; 
+    background-repeat: no-repeat; 
     margin-top: 30px;
     margin-right: 3%;
     color: #eb9f24;
     font-size: 24px;
 }
 
-input[type=text]:hover {
-    border-bottom: 2px solid#eb9f24;
+input[type=text]:focus {
+    background-image: none; 
 }
 
 #noPokemonsMessage {
