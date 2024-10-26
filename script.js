@@ -60,6 +60,11 @@ function filterAndShowPokemons(filterWord) {
         return;
     }
     filteredPokemons = allPokemons.filter(pokemon => pokemon.name.toLowerCase().includes(value.toLowerCase()));
+    if (filteredPokemons.length === 0) {
+        document.getElementById('noPokemonsMessage').classList.remove('d-none'); 
+    } else {
+        document.getElementById('noPokemonsMessage').classList.add('d-none');
+    }
     renderPokemonData(filteredPokemons.slice(0, 10));
 }
 
