@@ -254,7 +254,7 @@ input[type=text]:focus {
 }
 
 .pokemon-stats {
-    margin: 20px 0;
+    margin: 20px;
 }
 
 .stat {
@@ -385,5 +385,9 @@ input[type=text]:focus {
 @media (max-width: 407px) {
     .pikachu-logo {
       height: 150px;
+    }
+
+    .stat {
+        width: 250px;
     }
 }
