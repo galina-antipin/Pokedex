@@ -30,8 +30,8 @@ async function fetchData(currentStart, currentEnd) {
         let responseAsJson = await response.json();
         allPokemons.push(responseAsJson);
     }
+    renderPokemonData();   
     hideLoadingScreen();
-    renderPokemonData();
 }
 
 /**
