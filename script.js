@@ -12,6 +12,13 @@ function showLoadingScreen() {
 }
 
 /**
+ * Fetchs Pokémon Data when the window onload
+ */
+window.onload = () => {
+    fetchData(currentStart, currentEnd);
+};
+
+/**
  * Hides the loadingScreen
  */
 function hideLoadingScreen() {
@@ -20,12 +27,12 @@ function hideLoadingScreen() {
 
 /**
  * Fetches Pokémon data from the PokéAPI for a specified range of IDs
- * @param {number} start The starting Pokémon ID (inclusive) to fetch data for.
- * @param {number} end The ending Pokémon ID (inclusive) to fetch data for.
+ * @param {number} currentStart The starting Pokémon ID (inclusive) to fetch data for.
+ * @param {number} currentEnd The ending Pokémon ID (inclusive) to fetch data for.
  */
-async function fetchData(start, end) {
-    showLoadingScreen();
-    for (let i = start; i <= end; i++) {
+async function fetchData(currentStart, currentEnd) {
+    await showLoadingScreen();
+    for (let i = currentStart; i <= currentEnd; i++) {
         let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
         let responseAsJson = await response.json();
         allPokemons.push(responseAsJson);
