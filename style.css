@@ -342,7 +342,6 @@ input[type=text]:focus {
 }
 
 @media (max-width:876px) {
-
     .pikachu-logo {
         height: 200px;
     }
@@ -376,7 +375,6 @@ input[type=text]:focus {
 }
 
 @media (max-width:545px) {
-
     .overlay-container {
         width: 90%;
     }
