@@ -12,13 +12,6 @@ function showLoadingScreen() {
 }
 
 /**
- * Fetchs Pokémon Data when the window onload
- */
-window.onload = () => {
-    fetchData(currentStart, currentEnd);
-};
-
-/**
  * Hides the loadingScreen
  */
 function hideLoadingScreen() {
